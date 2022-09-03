@@ -6,6 +6,7 @@ import java.util.Set;
 /**
  * @Author: LJ
  * @Description: 剑指 Offer II 067. 最大的异或
+ * 中等
  * 使用前缀树来解题。异或相异为1，相同为0
  */
 public class zero67 {

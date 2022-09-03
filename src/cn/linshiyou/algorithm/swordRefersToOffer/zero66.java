@@ -8,6 +8,7 @@ import java.util.Map;
 /**
  * @Author: LJ
  * @Description: 剑指 Offer II 066. 单词之和
+ * 中等
  * 思路：使用Map和list进行暴力
  */
 public class zero66 {
