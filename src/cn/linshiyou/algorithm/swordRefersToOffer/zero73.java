@@ -6,7 +6,7 @@ import java.util.Arrays;
  * @Author: LJ
  * @Description: 剑指 Offer II 073. 狒狒吃香蕉
  * 不会
- * 中等：
+ * 中等：二分法
  */
 public class zero73 {
 
