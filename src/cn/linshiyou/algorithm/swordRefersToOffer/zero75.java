@@ -29,6 +29,7 @@ public class zero75 {
             for (int a: arr1) ans.add(a);
             for (int i=0; i<arr2.length; i++) map.put(arr2[i], i);
 
+            // 根据规则排序
             Collections.sort(ans, new Comparator<Integer>() {
                 @Override
                 public int compare(Integer a, Integer b) {
