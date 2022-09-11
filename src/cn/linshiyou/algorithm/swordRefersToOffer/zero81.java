@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * @Author: LJ
  * @Description: 剑指 Offer II 081. 允许重复选择元素的组合
- * 不会：与题80有一点类似的地方，采用搜索回溯
+ * 不会：dfs，采用搜索回溯
  * 中等
  */
 public class zero81 {
