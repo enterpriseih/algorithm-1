@@ -7,7 +7,7 @@ package cn.linshiyou.algorithm.swordRefersToOffer;
  *
  * 中等：
  */
-public class zreo91 {
+public class zero91 {
 
     public static void main(String[] args) {
 
