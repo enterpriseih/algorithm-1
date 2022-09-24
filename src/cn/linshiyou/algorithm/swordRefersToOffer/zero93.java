@@ -6,6 +6,8 @@ import java.util.Map;
 /**
  * @Author: LJ
  * @Description: 剑指 Offer II 093. 最长斐波那契数列
+ *
+ * 中等：动态规划
  */
 public class zero93 {
 

@@ -5,7 +5,7 @@ package cn.linshiyou.algorithm.swordRefersToOffer;
  * @Description: 剑指 Offer II 092. 翻转字符
  * 想法：
  *
- * 中等
+ * 中等：动态规划
  */
 public class zero92 {
 
