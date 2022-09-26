@@ -6,7 +6,7 @@ package cn.linshiyou.algorithm.swordRefersToOffer;
  *
  * 中等：动态规划的问题，要做好状态方程的转移问题
  */
-public class zero095 {
+public class zero95 {
 
     public static void main(String[] args) {
 
