@@ -33,11 +33,9 @@ public class zero96 {
             for (int i=0; i<=n; i++){
                 for (int j=0; j<=m; j++){
                     int p = i+j-1;
-                    // s1往前面试走一步
                     if (i>0){
                         f[i][j] = f[i][j] || (f[i-1][j] && s1.charAt(i-1)==s3.charAt(p));
                     }
-                    // s2往前面试走一步
                     if (j>0){
                         f[i][j] = f[i][j] || (f[i][j-1] && s2.charAt(j-1)==s3.charAt(p));
                     }
