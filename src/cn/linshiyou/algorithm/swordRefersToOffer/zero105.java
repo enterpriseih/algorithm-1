@@ -4,7 +4,7 @@ package cn.linshiyou.algorithm.swordRefersToOffer;
  * @Author: LJ
  * @Description: 剑指 Offer II 105. 岛屿的最大面积
  *
- * 中等：回溯，将已经遍历过的结点标记为0，防止重复遍历
+ * 中等：dfs，将已经遍历过的结点标记为0，防止重复遍历
  */
 public class zero105 {
 
@@ -38,24 +38,24 @@ public class zero105 {
                 for (int j=0; j<n; j++){
 
                     if (grid[i][j]==0) continue;
-                    area = Math.max(area, backStrace(grid, i, j));
+                    area = Math.max(area, dfs(grid, i, j));
 
                 }
             }
             return area;
         }
 
-        private int backStrace(int[][] grid, int i, int j) {
+        private int dfs(int[][] grid, int i, int j) {
             int m = grid.length;
             int n = grid[0].length;
             if (i<0 || j<0 || i==m || j==n || grid[i][j]==0) return 0;
 
             int sum = grid[i][j];
             grid[i][j] = 0;//防止重复路径
-            sum += backStrace(grid, i-1, j);
-            sum += backStrace(grid, i, j+1);
-            sum += backStrace(grid, i, j-1);
-            sum += backStrace(grid, i+1, j);
+            sum += dfs(grid, i-1, j);
+            sum += dfs(grid, i, j+1);
+            sum += dfs(grid, i, j-1);
+            sum += dfs(grid, i+1, j);
 
             return sum;
         }
