@@ -6,6 +6,7 @@ package cn.linshiyou.algorithm.swordRefersToOffer;
  * @Description: 剑指 Offer II 117. 相似的字符串
  *
  * 理解题意：并查集, 转化为连通分量，并查集的问题。
+ * find和check为并查集的模板代码
  *
  */
 public class zero117 {
