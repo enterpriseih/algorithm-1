@@ -8,6 +8,7 @@ import java.util.Arrays;
  * @Description: 剑指 Offer II 119. 最长连续序列
  *
  * 排序之后，寻找
+ * 另一种方法，哈希表
  *
  */
 public class zero119 {
