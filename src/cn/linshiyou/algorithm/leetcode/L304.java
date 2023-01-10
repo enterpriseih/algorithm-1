@@ -4,7 +4,7 @@ package cn.linshiyou.algorithm.leetcode;
  * @Author: LJ
  * @Description: 304. 二维区域和检索 - 矩阵不可变
  *
- * 前缀和技巧
+ * 前缀和技巧：一维前缀和，这个题可以使用二维前缀和
  */
 public class L304 {
 
