@@ -5,6 +5,7 @@ package cn.linshiyou.algorithm.leetcode;
  * @Description: 1094. 拼车
  *
  * 法一：差分数组
+ * 法二：排序+小顶堆
  *
  */
 public class L1094 {
@@ -23,9 +24,11 @@ public class L1094 {
 
     }
 
-    /**
-     * 差分数组
-     */
+
+    // 排序+小顶堆
+
+
+   // 差分数组
     static class Solution {
         public boolean carPooling(int[][] trips, int capacity) {
 
