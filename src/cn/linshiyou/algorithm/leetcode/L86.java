@@ -11,9 +11,47 @@ public class L86 {
 
 
     public static void main(String[] args) {
-
+        ListNode head = new ListNode(1);
+        head.next=new ListNode(4);
+        head.next.next=new ListNode(3);
+        head.next.next.next=new ListNode(2);
+        head.next.next.next.next=new ListNode(5);
+        head.next.next.next.next.next=new ListNode(2);
+        ListNode partition = new Solution().partition(head, 3);
     }
 
+    static class Solution {
+        public ListNode partition(ListNode head, int x) {
+
+            ListNode small = new ListNode();
+            ListNode tmpSmall = small;
+            ListNode lager = new ListNode();
+            ListNode tmpLager = lager;
+
+            while (head!=null){
+
+                if (head.val<x){
+                    tmpSmall.next = head;
+                    tmpSmall = tmpSmall.next;
+
+                }else {
+                    tmpLager.next = head;
+                    tmpLager = tmpLager.next;
+                }
+
+                // 断开原链表
+                ListNode temp = head.next;
+                head.next = null;
+                head = temp;
+
+            }
+            tmpSmall.next = lager.next;
+
+            return small.next;
+        }
+    }
+
+/* 法一
     class Solution {
         public ListNode partition(ListNode head, int x) {
 
@@ -41,7 +79,7 @@ public class L86 {
             return ans.next;
         }
     }
-
+*/
 
 
     static class ListNode {
