@@ -4,6 +4,8 @@ package cn.linshiyou.algorithm.swordRefersToOffer;
  * @Author: LJ
  * @Description: 剑指 Offer II 022. 链表中环的入口节点
  *
+ * 快慢指针 + 数学推导
+ *
  */
 public class zero22Ⅱ {
 
