@@ -7,7 +7,7 @@ import java.util.HashMap;
  * @Author: LJ
  * @Description: 26. 删除有序数组中的重复项
  *
- * 栈：
+ *  双指针
  */
 public class L26 {
 
