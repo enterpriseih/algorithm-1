@@ -25,32 +25,23 @@ public class L3 {
 
             Set<Character> windows = new HashSet<>();
 
-            int max = 0, temp = 0;
+            int max = 0;
             int left = 0, right = 0;
 
             while (right<s.length()){
                 char c = s.charAt(right);
                 right++;
 
-                if (!windows.contains(c)){
-                    windows.add(c);
-                    max = Math.max(max, ++temp);
-                    continue;
-                }else {
-
-                }
-
                 while (windows.contains(c)){
                     char d = s.charAt(left);
                     left++;
                     windows.remove(d);
-                    temp = windows.size();
-                    if (d==c){
-                        windows.add(c);
-                        max = Math.max(max, ++temp);
-                        break;
-                    }
+                    if (c==d) break;
                 }
+
+                windows.add(c);
+                max = Math.max(max, windows.size());
+
             }
             return max;
         }
