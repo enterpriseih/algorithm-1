@@ -64,7 +64,7 @@ public class L76 {
                         len = right - left;
                     }
 
-                    //滑动窗口收缩，将最右侧字符移出
+                    //滑动窗口收缩，将最左侧字符移出
                     char d = s.charAt(left);
                     left++;
                     if (need.containsKey(d)){
