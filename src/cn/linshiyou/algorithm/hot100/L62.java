@@ -1,5 +1,7 @@
 package cn.linshiyou.algorithm.hot100;
 
+import java.util.Arrays;
+
 /**
  * 62. 不同路径
  *
@@ -7,31 +9,28 @@ package cn.linshiyou.algorithm.hot100;
  * @create 2023/4/16
  */
 public class L62 {
-    public static void main(String[] args) {
+    public static int minInsertionsToMakeValid(String word) {
+        int n = word.length();
+        int[][] dp = new int[n + 1][3];
+        final int INF = (int) 1e9;
+        Arrays.stream(dp).forEach(a -> Arrays.fill(a, INF));
+        dp[0][0] = 0;
 
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < 3; j++) {
+                int k = (word.charAt(i) - 'a' + 1 - j + 3) % 3;
+                dp[i + 1][(j + k) % 3] = Math.min(dp[i + 1][(j + k) % 3], dp[i][j] + k);
+                dp[i + 1][(j + 3) % 3] = Math.min(dp[i + 1][(j + 3) % 3], dp[i][j] + 3);
+            }
+        }
+
+        return dp[n][0];
     }
 
-    class Solution {
-        public int uniquePaths(int m, int n) {
-            // 表示从起点到达位置 (i, j) 的不同路径数量。
-            int[][] dp = new int[m][n];
-            //将第一行和第一列的所有元素都设为 1，因为机器人只能向右或向下移动。
-            for (int i = 0; i < m; i++) {
-                dp[i][0] = 1;
-            }
-
-            for (int j = 0; j < n; j++) {
-                dp[0][j] = 1;
-            }
-
-            for (int i=1; i<m; i++){
-                for (int j=1; j<n; j++){
-                    dp[i][j] = dp[i-1][j] + dp[i][j-1];
-                }
-            }
-
-            return dp[m-1][n-1];
-        }
+    public static void main(String[] args) {
+        System.out.println(minInsertionsToMakeValid("aaa")); // 输出: 6
+        System.out.println(minInsertionsToMakeValid("b")); // 输出: 2
+        System.out.println(minInsertionsToMakeValid("abc")); // 输出: 0
     }
 
 }
