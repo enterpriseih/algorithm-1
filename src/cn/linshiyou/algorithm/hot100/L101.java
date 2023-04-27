@@ -1,0 +1,29 @@
+package cn.linshiyou.algorithm.hot100;
+
+import cn.linshiyou.algorithm.until.TreeNode;
+
+/**
+ * @author LJ
+ * @create 2023/4/27
+ */
+public class L101 {
+
+    public static void main(String[] args) {
+
+    }
+
+
+    class Solution {
+        public boolean isSymmetric(TreeNode root) {
+            return dfs(root.left, root.right);
+        }
+
+        private boolean dfs(TreeNode left, TreeNode right) {
+            if (left==null && right==null) return true;
+            if (left==null || right==null || left.val!=right.val) return false;
+
+            return dfs(left.left, right.right) && dfs(left.right, right.left);
+        }
+    }
+
+}
