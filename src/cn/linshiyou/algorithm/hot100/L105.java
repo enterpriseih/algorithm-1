@@ -1,6 +1,6 @@
 package cn.linshiyou.algorithm.hot100;
 
-import cn.linshiyou.algorithm.until.TreeNode;
+import cn.linshiyou.algorithm.common.TreeNode;
 
 import java.util.HashMap;
 import java.util.Map;

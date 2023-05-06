@@ -1,4 +1,4 @@
-package cn.linshiyou.algorithm.until;
+package cn.linshiyou.algorithm.common;
 
 /**
  * @author LJ

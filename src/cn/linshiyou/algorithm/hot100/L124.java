@@ -1,11 +1,6 @@
 package cn.linshiyou.algorithm.hot100;
 
-import cn.linshiyou.algorithm.until.TreeNode;
-
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
+import cn.linshiyou.algorithm.common.TreeNode;
 
 /**
  * 124. 二叉树中的最大路径和
