@@ -37,7 +37,7 @@ public class L215 {
         }
 
         private int randomPartition(int[] a, int l, int r) {
-            int i = random.nextInt(r - l + 1) + 1;
+            int i = random.nextInt(r - l + 1) + l;
             swap(a, i, r);
             return partition(a, l, r);
 
