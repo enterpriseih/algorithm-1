@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * 15. 三数之和
- *
+ * // TODO
  * @author: LJ
  * @create: 2023/2/2
  */
@@ -29,7 +29,6 @@ public class L15 {
                 int i = k+1, j = nums.length-1;
                 while (i<j){
                     int sum = nums[k] + nums[i] + nums[j];
-
                     if (sum<0){
                         while (i<j && nums[i]==nums[++i]);
                     }
